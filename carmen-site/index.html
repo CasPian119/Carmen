@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CARMEN 卡门 · Hearts2Hearts 主唱 | 从巴厘岛到首尔的阳光</title>
+<meta name="description" content="关于 Hearts2Hearts 主唱 Carmen(Nyoman Ayu Carmenita)的中文资料站:巴厘岛女孩、SM 首位印尼艺人、团队大姐与高音担当。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌴</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF8F0; --cream-2:#FDF0E2; --ink:#22262B; --ink-soft:#4a5058;
+  --coral:#F4534E; --coral-deep:#D93B36; --sky:#7CC6E6; --sky-deep:#2E8FB8;
+  --palm:#2E7D5B; --lemon:#FFC93C; --dark:#10393B; --dark-2:#0B2B2D; --card:#FFFFFF;
+  --radius:14px; --shadow:0 10px 30px rgba(34,38,43,.10);
+  --font-display:'Archivo Black','Noto Sans SC',sans-serif;
+  --font-hand:'Caveat','Noto Sans SC',cursive;
+  --font-body:'Noto Sans SC',system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--cream);color:var(--ink);line-height:1.75;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+::selection{background:var(--coral);color:#fff}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 4vw;transition:background .35s,box-shadow .35s}
+nav.scrolled{background:rgba(255,248,240,.88);backdrop-filter:blur(14px);box-shadow:0 2px 20px rgba(34,38,43,.08)}
+nav .logo{font-family:var(--font-display);font-size:20px;letter-spacing:.06em;color:#fff;transition:color .35s}
+nav.scrolled .logo{color:var(--ink)}
+nav .logo span{color:var(--lemon)}
+nav.scrolled .logo span{color:var(--coral)}
+nav ul{display:flex;gap:6px}
+nav ul a{font-size:14px;font-weight:500;padding:8px 14px;border-radius:999px;color:rgba(255,255,255,.92);transition:.25s}
+nav.scrolled ul a{color:var(--ink-soft)}
+nav ul a:hover{background:rgba(255,255,255,.18)}
+nav.scrolled ul a:hover{background:var(--cream-2)}
+nav ul a.active{background:var(--coral);color:#fff}
+@media(max-width:900px){nav ul{display:none}}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;overflow:hidden;background:var(--dark)}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:62% 18%;transform:scale(1.06);will-change:transform}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(78deg,rgba(16,57,59,.88) 0%,rgba(16,57,59,.55) 34%,rgba(16,57,59,.05) 62%,rgba(16,57,59,0) 100%)}
+.hero-bg::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,43,45,.9) 0%,rgba(11,43,45,0) 34%);z-index:1}
+.hero-inner{position:relative;padding:0 4vw 120px;max-width:1400px;width:100%;margin:0 auto}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--lemon);font-weight:700;letter-spacing:.28em;font-size:13px;text-transform:uppercase;margin-bottom:18px}
+.hero .eyebrow::before{content:"";width:42px;height:2px;background:var(--lemon)}
+.hero h1{font-family:var(--font-display);color:#fff;font-size:clamp(64px,12vw,168px);line-height:.94;letter-spacing:.01em;text-shadow:0 8px 40px rgba(0,0,0,.35)}
+.hero h1 .han{display:block;font-family:var(--font-body);font-weight:900;font-size:clamp(20px,2.6vw,34px);letter-spacing:.55em;color:var(--sky);margin-top:14px}
+.hero .tagline{margin-top:22px;max-width:520px;color:rgba(255,255,255,.9);font-size:clamp(15px,1.4vw,18px)}
+.hero .tagline b{color:var(--lemon);font-weight:700}
+.hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero-chips li{padding:8px 16px;border:1px solid rgba(255,255,255,.35);border-radius:999px;color:#fff;font-size:13.5px;font-weight:500;backdrop-filter:blur(6px);background:rgba(255,255,255,.08)}
+.hero-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:700;font-size:15px;transition:.25s;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-primary:hover{background:var(--coral-deep);transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+.hero-palm{position:absolute;right:3vw;bottom:110px;font-size:64px;filter:drop-shadow(0 10px 20px rgba(0,0,0,.3));animation:sway 5s ease-in-out infinite;transform-origin:bottom center}
+@keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(5deg)}}
+@media(max-width:700px){.hero-palm{display:none}.hero-bg img{object-position:68% 12%}}
+.marquee{background:var(--lemon);color:var(--ink);overflow:hidden;padding:12px 0;position:relative;z-index:2}
+.marquee .track{display:flex;width:max-content;animation:scroll 30s linear infinite}
+.marquee span{font-family:var(--font-display);font-size:15px;letter-spacing:.12em;white-space:nowrap;padding:0 18px;display:flex;align-items:center;gap:18px}
+.marquee span i{font-style:normal;color:var(--coral)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.hero .marquee{position:absolute;left:0;right:0;bottom:0}
+section{position:relative}
+.wrap{max-width:1200px;margin:0 auto;padding:110px 4vw}
+.sec-head{margin-bottom:56px}
+.sec-head .no{font-family:var(--font-hand);font-size:26px;color:var(--coral)}
+.sec-head h2{font-size:clamp(30px,4.4vw,52px);font-weight:900;letter-spacing:.02em;line-height:1.2}
+.sec-head h2 em{font-style:normal;color:var(--coral)}
+.sec-head p{margin-top:12px;color:var(--ink-soft);max-width:640px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.65,.3,1),transform .8s cubic-bezier(.2,.65,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.marquee .track,.hero-palm{animation:none}}
+.about-grid{display:grid;grid-template-columns:minmax(300px,430px) 1fr;gap:56px;align-items:start}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+.polaroid{position:relative;background:#fff;padding:16px 16px 58px;border-radius:6px;box-shadow:var(--shadow);transform:rotate(-2.2deg);transition:transform .4s}
+.polaroid:hover{transform:rotate(0deg) scale(1.015)}
+.polaroid img{border-radius:4px;aspect-ratio:3/3.6;object-fit:cover;width:100%}
+.polaroid .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:var(--font-hand);font-size:23px;color:var(--ink-soft)}
+.polaroid .tape{position:absolute;top:-14px;left:50%;transform:translateX(-50%) rotate(2deg);width:110px;height:30px;background:rgba(124,198,230,.55);border-radius:2px}
+.fact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.fact{background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:0 4px 16px rgba(34,38,43,.06);border:1px solid rgba(34,38,43,.05)}
+.fact dt{font-size:12.5px;color:var(--ink-soft);letter-spacing:.08em;margin-bottom:4px}
+.fact dd{font-weight:700;font-size:15.5px}
+.fact dd small{font-weight:500;color:var(--ink-soft)}
+.name-card{margin-top:22px;background:linear-gradient(120deg,#fff 0%,#FFF3EC 100%);border-left:4px solid var(--coral);border-radius:var(--radius);padding:22px 26px;box-shadow:0 4px 16px rgba(34,38,43,.06)}
+.name-card h3{font-size:17px;margin-bottom:8px}
+.name-card p{font-size:14.5px;color:var(--ink-soft)}
+.name-card b{color:var(--coral-deep)}
+.motto{margin-top:22px;background:var(--dark);color:#fff;border-radius:var(--radius);padding:26px 28px;position:relative;overflow:hidden}
+.motto::after{content:"🌴";position:absolute;right:14px;bottom:-16px;font-size:84px;opacity:.16}
+.motto .q{font-family:var(--font-hand);font-size:clamp(24px,2.6vw,32px);line-height:1.35;color:var(--lemon)}
+.motto .src{margin-top:8px;font-size:13px;color:rgba(255,255,255,.65)}
+#journey{background:var(--cream-2)}
+.timeline{position:relative;margin-top:10px}
+.timeline::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:3px;border-radius:3px;background:linear-gradient(var(--sky),var(--coral))}
+.t-item{position:relative;padding:0 0 44px 64px}
+.t-item:last-child{padding-bottom:0}
+.t-dot{position:absolute;left:8px;top:4px;width:24px;height:24px;border-radius:50%;background:#fff;border:6px solid var(--sky-deep);box-shadow:0 0 0 5px var(--cream-2)}
+.t-item:nth-child(even) .t-dot{border-color:var(--coral)}
+.t-card{background:var(--card);border-radius:var(--radius);padding:24px 28px;box-shadow:0 4px 18px rgba(34,38,43,.06);border:1px solid rgba(34,38,43,.05);transition:transform .3s,box-shadow .3s}
+.t-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.t-year{font-family:var(--font-display);color:var(--coral);font-size:15px;letter-spacing:.08em}
+.t-card h3{font-size:19px;margin:6px 0 8px}
+.t-card p{font-size:14.5px;color:var(--ink-soft)}
+.t-card b{color:var(--coral-deep)}
+.song-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.song-chips li{font-size:12.5px;background:var(--cream);border:1px dashed rgba(46,143,184,.5);color:var(--sky-deep);padding:5px 12px;border-radius:999px;font-weight:500}
+.disco{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
+.album{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 16px rgba(34,38,43,.07);border:1px solid rgba(34,38,43,.05);transition:transform .35s,box-shadow .35s;display:flex;flex-direction:column}
+.album:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(34,38,43,.16)}
+.album .cover{position:relative;aspect-ratio:1;overflow:hidden}
+.album .cover img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.65,.3,1)}
+.album:hover .cover img{transform:scale(1.06)}
+.album .type{position:absolute;top:12px;left:12px;background:rgba(16,57,59,.82);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.1em;padding:5px 12px;border-radius:999px}
+.album .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.album .date{font-size:12.5px;color:var(--ink-soft);letter-spacing:.06em;font-weight:500}
+.album h3{font-family:var(--font-display);font-size:19px;letter-spacing:.02em}
+.album .note{font-size:13.5px;color:var(--ink-soft);line-height:1.6}
+.album .note b{color:var(--coral-deep)}
+.album.newest .type{background:var(--coral)}
+#honors{background:var(--dark);color:#fff}
+#honors .sec-head h2{color:#fff}
+#honors .sec-head p{color:rgba(255,255,255,.7)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-bottom:60px}
+.stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px 24px;transition:.3s}
+.stat:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.stat .num{font-family:var(--font-display);font-size:clamp(34px,3.6vw,48px);color:var(--lemon);line-height:1.1}
+.stat .num small{font-size:.5em}
+.stat .lbl{margin-top:8px;font-size:13.5px;color:rgba(255,255,255,.78);line-height:1.55}
+.honor-cols{display:grid;grid-template-columns:1.2fr 1fr;gap:44px}
+@media(max-width:900px){.honor-cols{grid-template-columns:1fr}}
+.win-list li{display:flex;align-items:center;gap:14px;padding:13px 4px;border-bottom:1px dashed rgba(255,255,255,.18);font-size:14.5px}
+.win-list li:last-child{border-bottom:none}
+.win-list .d{color:var(--sky);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.win-list .show{margin-left:auto;background:rgba(124,198,230,.16);color:var(--sky);font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;white-space:nowrap}
+.win-list .song{font-weight:700}
+.personal-honor{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:22px 24px;margin-bottom:16px}
+.personal-honor h4{color:var(--lemon);font-size:15.5px;margin-bottom:6px}
+.personal-honor p{font-size:13.5px;color:rgba(255,255,255,.75)}
+.personal-honor .when{font-size:12px;color:rgba(255,255,255,.5);margin-top:6px;display:block}
+.tmi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px}
+.tmi{background:var(--card);border-radius:var(--radius);padding:22px 24px;box-shadow:0 4px 16px rgba(34,38,43,.06);border:1px solid rgba(34,38,43,.05);transition:transform .3s}
+.tmi:hover{transform:translateY(-4px)}
+.tmi .ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px}
+.tmi h3{font-size:16.5px;margin-bottom:6px}
+.tmi p{font-size:13.8px;color:var(--ink-soft);line-height:1.7}
+.tmi b{color:var(--coral-deep)}
+.phone{background:var(--dark);border-radius:26px;padding:26px 24px;color:#fff;box-shadow:var(--shadow);grid-row:span 2;display:flex;flex-direction:column}
+.phone h3{font-size:16px;margin-bottom:4px}
+.phone .sub{font-size:12.5px;color:rgba(255,255,255,.55);margin-bottom:16px}
+.phone ul{display:flex;flex-direction:column;gap:10px}
+.phone li{background:rgba(255,255,255,.08);border-radius:14px;padding:11px 16px;font-size:13.5px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.phone li b{color:var(--sky);white-space:nowrap}
+.phone li span{color:rgba(255,255,255,.85)}
+#gallery{background:var(--cream-2)}
+.masonry{columns:4 240px;column-gap:16px}
+.masonry figure{break-inside:avoid;margin-bottom:16px;border-radius:var(--radius);overflow:hidden;position:relative;cursor:zoom-in;box-shadow:0 4px 14px rgba(34,38,43,.08)}
+.masonry img{width:100%;transition:transform .5s cubic-bezier(.2,.65,.3,1)}
+.masonry figure:hover img{transform:scale(1.05)}
+.masonry figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;background:linear-gradient(to top,rgba(16,57,59,.8),transparent);color:#fff;font-size:12.5px;opacity:0;transition:opacity .3s}
+.masonry figure:hover figcaption{opacity:1}
+.lightbox{position:fixed;inset:0;z-index:200;background:rgba(11,43,45,.94);display:none;align-items:center;justify-content:center;flex-direction:column;padding:4vh 4vw}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(92vw,900px);max-height:80vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox .cap{color:#fff;margin-top:16px;font-size:14px;opacity:.85}
+.lb-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;width:48px;height:48px;border-radius:50%;font-size:20px;cursor:pointer;transition:.25s;display:flex;align-items:center;justify-content:center}
+.lb-btn:hover{background:var(--coral)}
+.lb-prev{left:3vw}.lb-next{right:3vw}
+.lb-close{position:absolute;top:24px;right:3vw;transform:none;font-size:16px}
+.group-band{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.group-band img{width:100%;aspect-ratio:16/8;object-fit:cover;object-position:center 22%}
+.group-band .ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,43,45,.85) 0%,rgba(11,43,45,.05) 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:34px 38px;color:#fff}
+.group-band h3{font-family:var(--font-display);font-size:clamp(26px,3.4vw,42px);letter-spacing:.03em}
+.group-band p{max-width:640px;font-size:14.5px;color:rgba(255,255,255,.88);margin-top:8px}
+.member-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.member-chips li{background:#fff;border:1px solid rgba(34,38,43,.08);border-radius:999px;padding:9px 20px;font-size:14px;font-weight:700;box-shadow:0 3px 10px rgba(34,38,43,.05)}
+.member-chips li.me{background:var(--coral);color:#fff;border-color:var(--coral)}
+.group-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.group-facts li{background:var(--cream);border-radius:999px;padding:8px 18px;font-size:13px;color:var(--ink-soft);border:1px dashed rgba(46,125,91,.4)}
+.group-facts b{color:var(--palm)}
+footer{background:var(--dark-2);color:rgba(255,255,255,.72);padding:56px 4vw 40px;text-align:center}
+footer .heart{font-family:var(--font-display);color:#fff;font-size:20px;letter-spacing:.14em;margin-bottom:14px}
+footer .heart span{color:var(--lemon)}
+footer p{font-size:13px;max-width:640px;margin:0 auto 8px;line-height:1.8}
+footer .src{opacity:.55;font-size:12px}
+section[id]{scroll-margin-top:72px}
+@media(max-width:700px){.hero .eyebrow{letter-spacing:.16em;font-size:11.5px}
+.hero h1{text-shadow:0 4px 24px rgba(0,0,0,.45)}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a class="logo" href="#top">CARMEN<span>.</span></a>
+  <ul id="navLinks">
+    <li><a href="#about">关于她</a></li>
+    <li><a href="#journey">成长之路</a></li>
+    <li><a href="#music">音乐作品</a></li>
+    <li><a href="#honors">荣耀时刻</a></li>
+    <li><a href="#tmi">了解她</a></li>
+    <li><a href="#gallery">相册</a></li>
+    <li><a href="#group">组合</a></li>
+  </ul>
+</nav>
+<header class="hero" id="top">
+  <div class="hero-bg"><img id="heroImg" src="assets/carmen-profile.jpg" alt="Carmen 官方资料照"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">Hearts2Hearts · Main Vocal</p>
+    <h1>CARMEN<span class="han">卡 门</span></h1>
+    <p class="tagline">Nyoman Ayu Carmenita —— 从巴厘岛的海风到首尔的舞台,SM 娱乐史上<b>首位印尼艺人</b>,Hearts2Hearts 的<b>大姐与主唱</b>。名字的意思是:唱着可爱歌谣的第三个孩子。</p>
+    <ul class="hero-chips">
+      <li>🌴 印尼 · 巴厘岛登巴萨</li>
+      <li>🎂 2006.03.28 白羊座</li>
+      <li>🎤 主唱担当</li>
+      <li>💙 粉丝名 S2U</li>
+    </ul>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#journey">她的故事 →</a>
+      <a class="btn btn-ghost" href="#gallery">看相册</a>
+    </div>
+  </div>
+  <div class="hero-palm">🌴</div>
+  <div class="marquee" aria-hidden="true">
+    <div class="track" id="marqueeTrack"></div>
+  </div>
+</header>
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="no">Chapter 01</div>
+      <h2>关于她 · <em>Bali Girl</em></h2>
+      <p>官方资料卡 & 名字背后的故事。</p>
+    </div>
+    <div class="about-grid">
+      <figure class="polaroid reveal">
+        <span class="tape"></span>
+        <img src="assets/g04.jpg" alt="Carmen 近照">
+        <figcaption class="cap">sunshine girl ☀ 2026</figcaption>
+      </figure>
+      <div>
+        <dl class="fact-grid reveal d1">
+          <div class="fact"><dt>本名</dt><dd>Nyoman Ayu Carmenita<br><small>妮欧曼·阿尤·卡门妮塔</small></dd></div>
+          <div class="fact"><dt>出生</dt><dd>2006.03.28<br><small>印尼巴厘省登巴萨</small></dd></div>
+          <div class="fact"><dt>组合担当</dt><dd>主唱 Main Vocal<br><small>队内大姐</small></dd></div>
+          <div class="fact"><dt>身高 / 血型</dt><dd>168cm · O 型</dd></div>
+          <div class="fact"><dt>MBTI</dt><dd>ESFP<br><small>出道初期为 INFP</small></dd></div>
+          <div class="fact"><dt>所属社</dt><dd>SM 娱乐<br><small>2023 年入社</small></dd></div>
+          <div class="fact"><dt>出道日</dt><dd>2025.02.24<br><small>单曲专辑《The Chase》</small></dd></div>
+          <div class="fact"><dt>代表符号</dt><dd>🌴 棕榈树<br><small>个人标签 #小开心</small></dd></div>
+        </dl>
+        <div class="name-card reveal d2">
+          <h3>名字的含义</h3>
+          <p><b>Nyoman</b> 在巴厘语中意为"家中第三个孩子",<b>Ayu</b> 意为"美丽",<b>Carmenita</b> 由拉丁语 Carmen(歌)加上指小词尾 -ita 组成 —— 合起来是"唱着小巧可爱美丽歌谣的三女儿"。有趣的是,父母早年在巴厘岛组的乐队就叫 <b>Carmen</b>,家里经营的酒吧也叫 <b>Carmen Wine House</b>,仿佛这个名字早已写好。</p>
+        </div>
+        <div class="motto reveal d3">
+          <div class="q">"人生无法完全随心所欲,<br>但我可以选择用笑容面对。"</div>
+          <div class="src">—— 改编自 Carmen 的座右铭「人生无法完全随心所欲」</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="journey">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="no">Chapter 02</div>
+      <h2>成长之路 · <em>从登巴萨到首尔</em></h2>
+      <p>一场瞒着父母开始的试镜,两年的练习生时光,和一次历史性的出道。</p>
+    </div>
+    <div class="timeline">
+      <div class="t-item reveal"><span class="t-dot"></span><div class="t-card">
+        <div class="t-year">2006 · 巴厘岛</div>
+        <h3>音乐世家的三女儿</h3>
+        <p>出生于巴厘岛登巴萨,家中四个孩子里排行老三。外婆是印尼传统舞者,妈妈是活跃歌手 Ayu Carmen(发行过约 7 张专辑),爸爸是乐队吉他手,父母还共同创办了巴厘传统表演艺术学院 "Ayu Bali Suara"。周岁抓周时,她一把抓住了麦克风。</p>
+      </div></div>
+      <div class="t-item reveal"><span class="t-dot"></span><div class="t-card">
+        <div class="t-year">童年 ~ 2018</div>
+        <h3>会跳高的打击乐少女</h3>
+        <p>12 岁开始学习巴厘传统打击乐器 Kempul,同时还是学校田径队选手 —— 2018 年拿下巴厘岛学生运动会跳高冠军(个人最好成绩 130cm)。高中时是人气班长,还当过校庆主持人。</p>
+      </div></div>
+      <div class="t-item reveal"><span class="t-dot"></span><div class="t-card">
+        <div class="t-year">梦想的起点</div>
+        <h3>被《The Boys》击中的瞬间</h3>
+        <p>在电视上看到少女时代《The Boys》的舞台后被 K-POP 深深吸引:"边跳边唱的样子太帅了。"从此立下成为 K-POP 偶像的目标,出道前还专程去看了 SHINee 的雅加达演唱会。</p>
+      </div></div>
+      <div class="t-item reveal"><span class="t-dot"></span><div class="t-card">
+        <div class="t-year">2022 · 秘密行动</div>
+        <h3>瞒着父母的 Zoom 试镜</h3>
+        <p>为了不错过机会,她瞒着父母用 Zoom 参加了 SM 线上试镜并成功通过,直到拿到雅加达线下终试资格才向家里坦白。父母担心她年纪太小反对去韩国,最后是姐姐帮忙一起说服了他们。</p>
+      </div></div>
+      <div class="t-item reveal"><span class="t-dot"></span><div class="t-card">
+        <div class="t-year">2023 · 雅加达全球选秀</div>
+        <h3>让星探团队眼前一亮的歌喉</h3>
+        <p>参加 SM 雅加达全球选秀,因出众的 Vocal 实力被选中,星探团队当场点歌一首接一首:</p>
+        <ul class="song-chips">
+          <li>少女时代 - 再次重逢的世界</li><li>太妍 - Fine</li><li>Wendy - When This Rain Stops</li><li>Wendy - Like Water</li><li>Reflection</li><li>Whitney Houston - I Have Nothing</li><li>Beyoncé - Listen</li><li>Daniel Caesar - Best Part</li><li>Tori Kelly - Don't You Worry 'bout a Thing</li>
+        </ul>
+      </div></div>
+      <div class="t-item reveal"><span class="t-dot"></span><div class="t-card">
+        <div class="t-year">2023 - 2025 · 练习生</div>
+        <h3>两年,翻译器与眼泪</h3>
+        <p>初到韩国时语言不通,只能靠 Papago 和翻译器交流;每天练习与学习并行,累了也不敢告诉远方的父母。她也曾认真考虑过放弃 —— 忙内 Ye-on 对她说"姐姐照这样做下去,一定能做到",姐姐也不停鼓励她。练习室里,她自弹自唱过 Bruno Mars《Talking to the Moon》和 Olivia Rodrigo《Vampire》。</p>
+      </div></div>
+      <div class="t-item reveal"><span class="t-dot"></span><div class="t-card">
+        <div class="t-year">2025.02.24 · 出道</div>
+        <h3>《The Chase》,登场</h3>
+        <p>作为 Hearts2Hearts 主唱正式出道。出道预告公开后,"Carmen" 立刻登上印尼 X(推特)实时趋势第一,出道 MV 也冲上印尼 YouTube 趋势榜首。出道专辑创下历代女团出道专初动销量第一,出道仅 15 天便拿下首个音乐节目一位。</p>
+      </div></div>
+      <div class="t-item reveal"><span class="t-dot"></span><div class="t-card">
+        <div class="t-year">2026 · 历史与荣光</div>
+        <h3>印尼第一人</h3>
+        <p>2026 年 3 月 14 日,随组合凭《RUDE!》拿下《音乐中心》一位 —— 出道 383 天,她成为<b>首位在韩国无线台音乐节目夺冠的印尼人</b>。4 月 1 日,受邀出席印尼总统普拉博沃访韩的官方欢迎仪式与国宾午宴。</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+<section id="music">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="no">Chapter 03</div>
+      <h2>音乐作品 · <em>高音是她的签名</em></h2>
+      <p>作为主唱,Carmen 几乎承包了组合每首歌的最高音:真声最高 G5,假声可达 C6,《RUDE!》的真声 F#5 和《FOCUS》桥段的三段爬升高音都是名场面。</p>
+    </div>
+    <div class="disco">
+      <article class="album reveal"><div class="cover"><span class="type">出道单曲专辑</span><img src="assets/cover-the-chase.webp" alt="The Chase" loading="lazy"></div>
+        <div class="body"><span class="date">2025.02.24</span><h3>The Chase</h3><p class="note">负责全曲最高音与结尾和声。历代女团出道专<b>初动销量第一</b>(40.9 万张)。</p></div></article>
+      <article class="album reveal d1"><div class="cover"><span class="type">数字单曲</span><img src="assets/cover-style.webp" alt="STYLE" loading="lazy"></div>
+        <div class="body"><span class="date">2025.06.18</span><h3>STYLE</h3><p class="note">高音担当并拿下队内<b>最多演唱 Part</b>,舞蹈表现力也在此回归期明显进化。</p></div></article>
+      <article class="album reveal d2"><div class="cover"><span class="type">先行单曲</span><img src="assets/cover-pretty-please.webp" alt="Pretty Please" loading="lazy"></div>
+        <div class="body"><span class="date">2025.09.24</span><h3>Pretty Please</h3><p class="note">迷你一辑《FOCUS》的先行曲,展现清爽甜美的另一面。</p></div></article>
+      <article class="album reveal d3"><div class="cover"><span class="type">迷你一辑</span><img src="assets/cover-focus.jpg" alt="FOCUS" loading="lazy"></div>
+        <div class="body"><span class="date">2025.10.20</span><h3>FOCUS</h3><p class="note">桥段 <b>G#5→G5→F#5 三连高音</b>直入副歌成为名场面。初动 42.5 万张,拿下 The Show 一位。</p></div></article>
+      <article class="album reveal"><div class="cover"><span class="type">数字单曲</span><img src="assets/cover-rude.webp" alt="RUDE!" loading="lazy"></div>
+        <div class="body"><span class="date">2026.02.20</span><h3>RUDE!</h3><p class="note">真声 <b>F#5</b> 震撼收尾。音乐节目<b>五连冠</b>含音中·人歌,MV 播放破 1.3 亿。</p></div></article>
+      <article class="album reveal d1"><div class="cover"><span class="type">迷你二辑</span><img src="assets/cover-lemon-tang.png" alt="Lemon Tang" loading="lazy"></div>
+        <div class="body"><span class="date">2026.06.22</span><h3>Lemon Tang</h3><p class="note">五代女团<b>初动第二</b>(59.2 万张)。淡紫长发造型出圈,再夺两座一位奖杯。</p></div></article>
+      <article class="album reveal d2"><div class="cover"><span class="type">日本出道单曲</span><img src="assets/cover-iconic-heart.jpg" alt="ICONIC HEART" loading="lazy"></div>
+        <div class="body"><span class="date">2026.08.12</span><h3>ICONIC HEART</h3><p class="note">日本正式出道单曲,开启日本活动。</p></div></article>
+      <article class="album newest reveal d3"><div class="cover"><span class="type">最新单曲</span><img src="assets/cover-moonride.jpg" alt="Moonride" loading="lazy"></div>
+        <div class="body"><span class="date">2026.09</span><h3>Moonride</h3><p class="note">最新单曲,MV 于 9 月公开,正在打歌期。</p></div></article>
+    </div>
+  </div>
+</section>
+<section id="honors">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="no">Chapter 04</div>
+      <h2>荣耀时刻 · <em>纪录与奖杯</em></h2>
+      <p>出道一年半,从"怪物新人"到"纪录制造机"。</p>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><div class="num"><span data-count="9">0</span><small> 座</small></div><div class="lbl">音乐节目一位<br>含 MCD · 音中 · 人歌</div></div>
+      <div class="stat reveal d1"><div class="num"><span data-count="40.9" data-dec="1">0</span><small> 万张</small></div><div class="lbl">《The Chase》初动<br>历代女团出道专第一</div></div>
+      <div class="stat reveal d2"><div class="num"><span data-count="383">0</span><small> 天</small></div><div class="lbl">出道到无线台一位<br>印尼艺人史上首次</div></div>
+      <div class="stat reveal d3"><div class="num"><span data-count="1.3" data-dec="1">0</span><small> 亿+</small></div><div class="lbl">《RUDE!》MV 播放量<br>2026.08 基准</div></div>
+    </div>
+    <div class="honor-cols">
+      <div class="reveal">
+        <ul class="win-list">
+          <li><span class="d">2025.03.11</span><span class="song">The Chase</span><span class="show">The Show · 初一位</span></li>
+          <li><span class="d">2025.10.28</span><span class="song">FOCUS</span><span class="show">The Show</span></li>
+          <li><span class="d">2026.03.05</span><span class="song">RUDE!</span><span class="show">M Countdown</span></li>
+          <li><span class="d">2026.03.14</span><span class="song">RUDE!</span><span class="show">音乐中心 ★</span></li>
+          <li><span class="d">2026.03.19</span><span class="song">RUDE!</span><span class="show">M Countdown</span></li>
+          <li><span class="d">2026.03.21</span><span class="song">RUDE!</span><span class="show">音乐中心</span></li>
+          <li><span class="d">2026.03.22</span><span class="song">RUDE!</span><span class="show">人气歌谣</span></li>
+          <li><span class="d">2026.07.02</span><span class="song">Lemon Tang</span><span class="show">M Countdown</span></li>
+          <li><span class="d">2026.07.08</span><span class="song">Lemon Tang</span><span class="show">Show Champion</span></li>
+        </ul>
+      </div>
+      <div class="reveal d1">
+        <div class="personal-honor">
+          <h4>🏆 2026 K World Dream Awards</h4>
+          <p>女子 Solo 人气奖 —— 以个人名义拿下的人气奖杯。</p>
+          <span class="when">2026.08.27</span>
+        </div>
+        <div class="personal-honor">
+          <h4>🇮🇩 印尼总统访韩国宾午宴受邀</h4>
+          <p>作为在韩国活动的印尼代表艺人,出席普拉博沃总统访韩官方欢迎仪式与午宴。</p>
+          <span class="when">2026.04.01</span>
+        </div>
+        <div class="personal-honor">
+          <h4>🎧 Spotify Wrapped Live Indonesia</h4>
+          <p>回到家乡印尼,担任 Spotify 年度盛典颁奖嘉宾。</p>
+          <span class="when">2025.12.04</span>
+        </div>
+        <div class="personal-honor">
+          <h4>📖 杂志画报</h4>
+          <p>DAZED KOREA 2025 Girl Edition、W KOREA 2025 年 6 月号 W Beauty 单元。</p>
+          <span class="when">2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="tmi">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="no">Chapter 05</div>
+      <h2>了解她 · <em>TMI 大放出</em></h2>
+      <p>舞台下的 Carmen:吃货、猫奴、抓虫担当,还有一部装满了妹妹们可爱备注的手机。</p>
+    </div>
+    <div class="tmi-grid">
+      <div class="tmi reveal"><div class="ic" style="background:#FFE9E7">🍕</div><h3>吃货地图</h3><p>最爱<b>披萨、巴东饭、炒年糕</b>;草莓冰淇淋按箱囤,奶茶续命,几乎不喝咖啡。推荐印尼菜:巴东饭、印尼炒饭、沙嗲、炸香蕉和巴厘香料鸡 Ayam Betutu。不能吃香蕉(童年吃药留下的阴影)、海鲜和蘑菇。</p></div>
+      <div class="tmi reveal d1"><div class="ic" style="background:#E3F3FB">🎧</div><h3>播放列表</h3><p>挚爱 <b>Bruno Mars</b>(《Talking to the Moon》《Risk It All》),也爱 Olivia Rodrigo、Daniel Caesar、Ariana Grande。K-POP 初心是少女时代和 SHINee,最想正式翻唱的歌是《再次重逢的世界》。</p></div>
+      <div class="tmi reveal d2"><div class="ic" style="background:#E9F6EF">🎹</div><h3>乐器全能</h3><p>会弹<b>钢琴、吉他、鼓、小提琴</b>,12 岁起学习巴厘传统打击乐 Kempul。练习生时期常被点名表演钢琴弹唱。</p></div>
+      <div class="tmi reveal d3"><div class="ic" style="background:#FFF4DC">🐱</div><h3>猫奴一枚</h3><p>养着一只叫 <b>Luna</b> 的猫,和同样养猫的忙内 Ye-on 一起做过流浪猫志愿活动。模仿猫叫惟妙惟肖,经常不自觉就喵出声。</p></div>
+      <div class="tmi reveal"><div class="ic" style="background:#F0E9FB">✋</div><h3>手与魔术</h3><p>手大、手指超长,特技是<b>手指魔术</b>,甚至能用食指和小指"鼓掌"。Ye-on 蒙着眼只凭手指长度就能认出她。</p></div>
+      <div class="tmi reveal d1"><div class="ic" style="background:#E3F3FB">👓</div><h3>眼镜与小秘密</h3><p>右眼近视高达 <b>-9.00</b>,平时离不开眼镜;但镜片后面是一双出了名的大眼睛。2025 年 10 月才第一次打耳洞。</p></div>
+      <div class="tmi reveal d2"><div class="ic" style="background:#FFE9E7">☀️</div><h3>人间小太阳</h3><p>成员说她像《头脑特工队》里的乐乐 —— 拍摄时别人被导演要求"多笑一点",只有她被要求"少笑一点"。同时她还是队内<b>抓虫担当</b>:蟑螂掉到 Ian 头上,她眼都不眨就徒手解决。</p></div>
+      <div class="tmi reveal d3"><div class="ic" style="background:#E9F6EF">🌴</div><h3>巴厘岛之魂</h3><p>自我介绍时总说"来自巴厘岛"而不是"来自印尼"。如果能学会一种魔法,她想要<b>瞬间移动</b> —— 想爸妈的时候,立刻就能回到巴厘岛的海边。</p></div>
+      <aside class="phone reveal d2">
+        <h3>📱 她手机里的成员备注</h3>
+        <div class="sub">来自 Carmen 本人的通讯录</div>
+        <ul>
+          <li><b>Jiwoo</b><span>最棒队长 ^^</span></li>
+          <li><b>Yuha</b><span>Yu哈哈哈哈😋</span></li>
+          <li><b>Stella</b><span>Stellaarawrr💖</span></li>
+          <li><b>Juun</b><span>朱세은 ✌️🤍</span></li>
+          <li><b>A-na</b><span>我们 MC A-na 🌻</span></li>
+          <li><b>Ian</b><span>Ian Sopian ❤️</span></li>
+          <li><b>Ye-on</b><span>极端 TJ Ye-on 😘🤍</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="no">Chapter 06</div>
+      <h2>相册 · <em>Sunshine Moments</em></h2>
+      <p>舞台、下班路、一位安可与日常 —— 点开可放大。</p>
+    </div>
+    <div class="masonry" id="masonry">
+      <figure class="reveal"><img src="assets/g08.jpg" alt="一位获奖时刻" loading="lazy"><figcaption>一位获奖时刻 · 2026</figcaption></figure>
+      <figure class="reveal d1"><img src="assets/g01.jpg" alt="打歌舞台" loading="lazy"><figcaption>打歌舞台</figcaption></figure>
+      <figure class="reveal d2"><img src="assets/g05.jpg" alt="日常随拍" loading="lazy"><figcaption>休息日随拍</figcaption></figure>
+      <figure class="reveal d3"><img src="assets/g02.jpg" alt="校庆演出" loading="lazy"><figcaption>大学校庆演出</figcaption></figure>
+      <figure class="reveal"><img src="assets/g06.jpg" alt="运动风造型" loading="lazy"><figcaption>运动风造型</figcaption></figure>
+      <figure class="reveal d1"><img src="assets/g03.jpg" alt="蓝白球衣舞台" loading="lazy"><figcaption>蓝白球衣舞台</figcaption></figure>
+      <figure class="reveal d2"><img src="assets/g09.jpg" alt="头顶比心" loading="lazy"><figcaption>头顶比心</figcaption></figure>
+      <figure class="reveal d3"><img src="assets/g10.jpg" alt="出行路透" loading="lazy"><figcaption>出行路透</figcaption></figure>
+      <figure class="reveal"><img src="assets/g11.jpg" alt="粉色灯光下" loading="lazy"><figcaption>粉色灯光下</figcaption></figure>
+      <figure class="reveal d1"><img src="assets/g07.jpg" alt="与成员们的合影" loading="lazy"><figcaption>与成员们的合影</figcaption></figure>
+      <figure class="reveal d2"><img src="assets/carmen-profile.jpg" alt="官方资料照" loading="lazy"><figcaption>官方资料照</figcaption></figure>
+    </div>
+  </div>
+</section>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lb-btn lb-close" id="lbClose">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev">‹</button>
+  <img id="lbImg" src="" alt="">
+  <div class="cap" id="lbCap"></div>
+  <button class="lb-btn lb-next" id="lbNext">›</button>
+</div>
+<section id="group">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="no">Chapter 07</div>
+      <h2>她所在的组合 · <em>Hearts2Hearts</em></h2>
+      <p>SM 娱乐 2025 年推出的八人女团,定位介于少女时代与 f(x) 之间,以 "Mystic × Girlhood" 为概念核心。</p>
+    </div>
+    <div class="group-band reveal">
+      <img src="assets/group.jpg" alt="Hearts2Hearts 团体照" loading="lazy">
+      <div class="ov">
+        <h3>Hearts2Hearts 하츠투하츠</h3>
+        <p>2025.02.24 出道 · 粉丝名 S2U · 应援色天蓝。组合标志 "S2" 既是爱心也是四叶草,寓意幸运、希望与相连的心。</p>
+      </div>
+    </div>
+    <ul class="member-chips reveal d1">
+      <li class="me">Carmen · 大姐/主唱 🌴</li>
+      <li>Jiwoo · 队长</li>
+      <li>Yuha</li>
+      <li>Stella</li>
+      <li>Juun · 主舞</li>
+      <li>A-na</li>
+      <li>Ian · 视觉中心</li>
+      <li>Ye-on · 忙内</li>
+    </ul>
+    <ul class="group-facts reveal d2">
+      <li>Vocal Line:<b>Carmen · Ye-on · Yuha · Stella</b></li>
+      <li>平均身高约 <b>166.8cm</b> 的长身团</li>
+      <li>YouTube 订阅 <b>361 万+</b> · Instagram <b>550 万+</b> · TikTok <b>770 万+</b>(2026.08)</li>
+      <li>2025 年颁奖礼 <b>10 冠</b>,2026 年再揽 <b>10 冠</b></li>
+    </ul>
+  </div>
+</section>
+<footer>
+  <div class="heart">CARMEN<span> 🌴 </span>HEARTS2HEARTS</div>
+  <p>本站为粉丝自制的中文安利页,非官方网站。资料整理自 Namu Wiki、Kpopping 等公开来源,图片版权归原作者所有(SM Entertainment / 各拍摄方)。</p>
+  <p class="src">页面制作于 2026 年 9 月 · 如有出入欢迎指正 · S2U 💙</p>
+</footer>
+<script>
+(function(){
+  const items = ["CARMEN","🌴","NYOMAN AYU CARMENITA","☀","BALI → SEOUL","🎤","MAIN VOCAL","💙","S2U","🌴","EST. 2006.03.28","☀"];
+  const track = document.getElementById("marqueeTrack");
+  const half = items.map(function(t){return '<span>'+t+'<i>✦</i></span>'}).join("");
+  track.innerHTML = half + half;
+})();
+
+(function(){
+  const nav = document.getElementById("nav");
+  const onScroll = function(){ nav.classList.toggle("scrolled", window.scrollY > 40); };
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+  const links = Array.from(document.querySelectorAll("#navLinks a"));
+  const secs = links.map(function(a){ return document.querySelector(a.getAttribute("href")); });
+  const spy = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(l){ l.classList.toggle("active", l.getAttribute("href")==="#"+e.target.id); });
+      }
+    });
+  },{rootMargin:"-40% 0px -55% 0px"});
+  secs.forEach(function(s){ if(s) spy.observe(s); });
+})();
+
+(function(){
+  const io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+})();
+
+(function(){
+  const io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      const el = e.target, target = parseFloat(el.dataset.count), dec = +(el.dataset.dec||0);
+      const t0 = performance.now(), dur = 1400;
+      (function tick(t){
+        const p = Math.min(1,(t-t0)/dur), ease = 1-Math.pow(1-p,3);
+        el.textContent = (target*ease).toFixed(dec);
+        if(p<1) requestAnimationFrame(tick);
+      })(t0);
+      io.unobserve(el);
+    });
+  },{threshold:.6});
+  document.querySelectorAll("[data-count]").forEach(function(el){ io.observe(el); });
+})();
+
+(function(){
+  const img = document.getElementById("heroImg");
+  if(!img) return;
+  window.addEventListener("scroll", function(){
+    const y = window.scrollY;
+    if(y < window.innerHeight) img.style.transform = "scale(1.06) translateY(" + (y*0.12) + "px)";
+  }, {passive:true});
+})();
+
+(function(){
+  const figs = Array.from(document.querySelectorAll("#masonry figure"));
+  const lb = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lbImg");
+  const lbCap = document.getElementById("lbCap");
+  let idx = 0;
+  function show(i){
+    idx = (i+figs.length)%figs.length;
+    const img = figs[idx].querySelector("img");
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbCap.textContent = figs[idx].querySelector("figcaption").textContent;
+    lb.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function close(){ lb.classList.remove("open"); document.body.style.overflow = ""; }
+  figs.forEach(function(f,i){ f.addEventListener("click", function(){ show(i); }); });
+  document.getElementById("lbClose").addEventListener("click", close);
+  document.getElementById("lbPrev").addEventListener("click", function(e){ e.stopPropagation(); show(idx-1); });
+  document.getElementById("lbNext").addEventListener("click", function(e){ e.stopPropagation(); show(idx+1); });
+  lb.addEventListener("click", function(e){ if(e.target===lb) close(); });
+  document.addEventListener("keydown", function(e){
+    if(!lb.classList.contains("open")) return;
+    if(e.key==="Escape") close();
+    if(e.key==="ArrowLeft") show(idx-1);
+    if(e.key==="ArrowRight") show(idx+1);
+  });
+})();
+</script>
+</body>
+</html>
